@@ -2,15 +2,31 @@
   "name": "@dsh-external/dsh-pet-notepad",
   "version": "0.1.0",
   "description": "DSH Web GUI 桌宠伴生记事本：右键宠物弹出悬浮记事本，左侧栏「记事本」入口可查看/编辑；Host 侧 JSON 权威持久化，单块纯文本随手粘贴。",
-  "private": true,
   "type": "module",
   "main": "./lib/index.js",
   "files": [
     "lib",
     "cordis.patch.yml",
-    "README.md"
+    "install.mjs",
+    "README.md",
+    "LICENSE"
   ],
   "license": "BSD-3-Clause",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "desktop-pet",
+    "notepad",
+    "web-ui"
+  ],
+  "homepage": "https://github.com/xianwins4ever-ux/dsh-pet-notepad#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xianwins4ever-ux/dsh-pet-notepad.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xianwins4ever-ux/dsh-pet-notepad/issues"
+  },
   "exports": {
     ".": {
       "default": "./lib/index.js"
@@ -20,8 +36,13 @@
     },
     "./package.json": "./package.json"
   },
-  "scripts": {
-    "check": "node scripts/check.mjs"
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.1.7-rc.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dsh": {
     "bundle": {
