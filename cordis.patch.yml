@@ -1,0 +1,12 @@
+# dsh-pet-notepad bundle patch：把插件行插进 web profile 的装配清单。
+#
+# 两种安装方式：
+#   1) 运行时注入（推荐，免重启）：dev_inject_plugin {"dir": "<本目录绝对路径>"}
+#   2) 永久装配（写入 profile，重启后自动生效）：
+#        dsh plugin --profile web add link:<本目录绝对路径>
+#      或手动把下面这段并进 ~/.dsh/profiles/web/cordis.patch.yml
+#
+# 本插件不需要构建（lib/*.js 即最终产物），因此不需要 checkout。
+- insert:
+    - id: pet-notepad
+      name: '@dsh-external/dsh-pet-notepad'

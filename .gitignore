@@ -1,0 +1,21 @@
+# 系统文件
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# 编辑器
+.vscode/
+.idea/
+
+# 日志与临时文件
+*.log
+*.tmp-*
+
+# 运行时数据
+# 本插件的记事本数据存在 ~/.dsh/pet-notepad/notepad.json，本来就不在仓库内；
+# 这条规则只是防止有人把数据文件误拷进来。
+notepad.json
+notepad.json.corrupt-*
+
+# 依赖（本插件零依赖，规则仅为防误提交）
+node_modules/

@@ -1,0 +1,7 @@
+# 统一行尾：仓库内一律 LF，Windows 检出也不转换，避免无意义的整文件 diff
+* text=auto eol=lf
+
+# 二进制
+*.png binary
+*.webp binary
+*.tgz binary
